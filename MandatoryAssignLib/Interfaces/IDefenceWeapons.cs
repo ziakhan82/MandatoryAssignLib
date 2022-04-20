@@ -8,7 +8,7 @@ namespace MandatoryAssignLib.Interfaces
 {
   public  interface IDefenceWeapons
     {
-        public int Damage { get; set; }
-        public string Description  { get; set; }
+        public int Damage { get;  }
+        public string Description  { get; }
     }
 }

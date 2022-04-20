@@ -10,6 +10,6 @@ namespace MandatoryAssignLib.Weapons
     {
        // public string Name { get; set; }
 
-        public int ReducedHitPoints { get; set; }
+        public int ReducedHitPoints { get;  }
     }
 }

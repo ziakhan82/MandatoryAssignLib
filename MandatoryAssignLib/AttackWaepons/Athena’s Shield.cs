@@ -7,21 +7,35 @@ using MandatoryAssignLib.Interfaces;
 
 namespace MandatoryAssignLib.Weapons
 {
-    public class Athena_s_Shield : DefenceWeaponBase
+    public class Athena_s_Shield : DefenceItem
     {
-        public string Name { get; set; }
-       // public override int Damage { get; set; }
+        public override string Name { get; set; }
 
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
 
-       // public Position Position { get; set; }
-
-        public Athena_s_Shield(string name)
+        public override int Damage
         {
-            this.Name = name;
-           //this.Position = position;
+            get
+            {
+                return 10;
+            }
+        }
 
+        public override string Description
+        {
+            get
+            {
+                return "Best shield";
+            }
+        }
+
+        public Athena_s_Shield()
+        {
+                
+        }
+
+        public Athena_s_Shield(string name):base(name)
+        {
+                
         }
     }
 }

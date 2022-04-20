@@ -7,20 +7,30 @@ using MandatoryAssignLib.Interfaces;
 
 namespace MandatoryAssignLib.Weapons
 {
-   public class Cursed_Helmet:DefenceWeaponBase
+    public class Cursed_Helmet : DefenceItem
     {
-        public string Name { get; set; }
-      //  public override int Damage { get; set; }
+        public override string Name { get; set; }
 
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
 
-     
 
-        public Cursed_Helmet(string name)
+        public override int Damage
         {
-            this.Name = name;
-          
+            get
+            {
+                return 5;
+            }
+        }
+
+        public override string Description => "Best helmet";
+
+        public Cursed_Helmet()
+        {
+                
+        }
+
+        public Cursed_Helmet(string name):base(name)
+        {
+            
         }
     }
 }

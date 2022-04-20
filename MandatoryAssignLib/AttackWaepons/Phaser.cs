@@ -1,31 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using WeaponFactory.Weapons;
-
-namespace MandatoryAssignLib.Weapons
+﻿namespace MandatoryAssignLib.Weapons
 {
-    public class Phaser : WeaponBase
+    public class Phaser : AttackItem
     {
-        public string Name { get; set; }
-        public override int Damage { get; set; }
-        public override int Range { get; set;}
-        public override string description { get; set; }
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
+        public override string Name { get; set; }
 
-      
-
-        public Phaser( string name )
+        public override int HitPoints
         {
-            this.Name = name;
-          
-
+            get
+            {
+                return 15;
+            }
         }
 
+        public override string description => "Best Phaser";
 
+        public override int Range => 15;
+
+        public Phaser()
+        {
+                
+        }
+
+        public Phaser(string name):base(name)
+        {
+                
+        }
     }
 }

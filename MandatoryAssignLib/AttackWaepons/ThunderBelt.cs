@@ -7,23 +7,18 @@ using MandatoryAssignLib.Interfaces;
 
 namespace MandatoryAssignLib.Weapons
 {
-   public class ThunderBelt :DefenceWeaponBase
+    public class ThunderBelt : DefenceItem
     {
-        public string Name { get; set; }
-       // public override int Damage { get; set; }
+        public override string Name { get; set; }
 
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
-
-        
-
-        public ThunderBelt(string name)
+        public ThunderBelt(string name):base(name)
         {
-            this.Name = name;
-          
-            this.Damage = -30;
-            
+           
 
         }
+
+        public override int Damage => 10;
+
+        public override string Description => "Best belt";
     }
 }

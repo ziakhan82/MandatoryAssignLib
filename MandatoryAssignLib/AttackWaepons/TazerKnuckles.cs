@@ -1,30 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WeaponFactory.Weapons;
-
-namespace MandatoryAssignLib.Weapons
+﻿namespace MandatoryAssignLib.Weapons
 {
-    public class TazerKnuckles : WeaponBase
+    public class TazerKnuckles : AttackItem
     {
+        public override string Name { get; set;}
         
-        public string Name { get; set; }
-        public override int Damage { get; set; }
-        public override int Range { get; set; }
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
-        public override string description { get; set; }
+            
 
-
-        public TazerKnuckles(string name, Position position)
+        public override int HitPoints
         {
-            this.Name = name;
-           
-
+            get
+            {
+                return 60;
+            }
         }
 
+        public override string description
+        {
+            get
+            {
+                return "The best one";
+            }
+        }
+
+       
+
+
+        
+
+        public override int Range  {
+           get
+           {
+               return 10;
+
+           }
+        }
+
+        public TazerKnuckles()
+        {
+            
+        }
+
+        public TazerKnuckles(string name):base(name)
+        {
+            
+        }
     }
-    
-}
+}  

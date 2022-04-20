@@ -7,15 +7,32 @@ using MandatoryAssignLib.Interfaces;
 
 namespace MandatoryAssignLib
 {
-   public class AttackItem:WorldObject,IWeapon
+   public abstract class AttackItem:WorldObject,IWeapon
     {
+        /// <summary>
+        /// Properties for the attack item
+        /// </summary>
 
-        public int HitPoints { get; set; }
+        public abstract string Name  { get; set; }
+        public abstract int HitPoints { get; }
+        public abstract string description { get; }
+        public abstract int Range { get;  }
 
-        public string Name  { get; set; }
+        public AttackItem()
+        {
+            
+        }
 
-        public int Damage { get; set; }
-        public int Range { get; set; }
-        public string description { get; set; }
+        public AttackItem(string name)
+        {
+            this.Name = name;
+
+        }
+       
+
+        public override string ToString()
+        {
+            return $"{Name}:{description},dealing{HitPoints} hitPoints,Range{Range}";
+        }
     }
 }

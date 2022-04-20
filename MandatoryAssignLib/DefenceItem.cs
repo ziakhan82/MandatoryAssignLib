@@ -7,12 +7,26 @@ using System.Threading.Tasks;
 
 namespace MandatoryAssignLib
 {
-  public  class DefenceItem :WorldObject,IDefenceWeapons
+  public abstract  class DefenceItem :WorldObject,IDefenceWeapons
     {
 
-        public string Name { get; set; }
-        public int ReduceHitPoints { get; set; }
-        public string Description  { get; set; }
-        public int Damage { get;  set; }
+        public abstract string Name { get; set; }
+        public abstract int Damage { get;  }
+        public abstract string Description  { get;  }
+
+        public DefenceItem()
+        {
+                
+        }
+
+        public DefenceItem(string Name)
+        {
+            this.Name = Name;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}:{Description},dealing{Damage} damage points";
+        }
     }
 }

@@ -98,7 +98,7 @@ namespace MandatoryAssignLib
         /// <param name="hit"></param>
         public void RecivedFromOtherCreature(int slaps)
         {
-            var defence = ListOFdefenceItems.Sum(defenceItem => defenceItem.ReduceHitPoints);
+            var defence = ListOFdefenceItems.Sum(defenceItem => defenceItem.Damage);
             HitPoint -= (slaps - defence);
         }
 

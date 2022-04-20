@@ -16,11 +16,11 @@ namespace MandatoryAssignLib
        static Tracing()
        {
            ts.Switch = new SourceSwitch("ZiaLog","All");
-           string logFile = "FileLog.text";
+           string logFile = "FileLog.txt";
            string filePath = Environment.GetEnvironmentVariable("war");
            string fullPath = Path.Combine(logFile, filePath);
 
-           TraceListener traceListener = new TextWriterTraceListener(new StreamWriter(fullPath));
+           TraceListener traceListener = new TextWriterTraceListener(new StreamWriter(logFile));
 
            traceListener.Filter = new EventTypeFilter(SourceLevels.All);
 

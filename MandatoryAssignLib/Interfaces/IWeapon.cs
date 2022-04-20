@@ -11,10 +11,10 @@ namespace MandatoryAssignLib.Interfaces
     /// </summary>
    public interface IWeapon
     {
-        int Damage { get; set; }
-        int Range { get; set; }
+       int  HitPoints{ get; }
+ 
 
-        string description { get; set; }
+        string description { get; }
 
     }
 

@@ -15,6 +15,21 @@ namespace MandatoryAssignLib
 
         public bool isDead();
 
+        //Single responsibility Principle using multiple interfaces
+
+        interface IDead
+        {
+            public bool isDead();
+        }
+        interface ILootObjectsFromOthers{
+            public void LootObjectsFromOthers(WorldObject worldObject);
+        
+            
+        }
+
+
+
+
 
     }
 }

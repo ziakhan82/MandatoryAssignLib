@@ -1,36 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WeaponFactory.Weapons;
-
-namespace MandatoryAssignLib.Weapons
+﻿namespace MandatoryAssignLib.Weapons
 {
-    public class GreateMagic : WeaponBase
-    { 
-        public  string Name { get; set; }
-        public bool Lootable { get; set; } = true;
-        public bool Removable { get; set; } = true;
-        public override int Damage { get; set; }
-        public override string description { get; set; }
-        public override int Range { get; set; }
+    public class GreateMagic : AttackItem
+    {
+        public override string Name { get; set; }
 
-     
-
-        public GreateMagic( string name)
+        public override int HitPoints
         {
-           this.Name = name;
-        
-
+            get { return 25; }
         }
 
-        public override string ToString()
+        public override string description
         {
-            return base.ToString(); 
+            get { return "Greatest magic in existance"; }
+        }
+
+        public override int Range => 20;
+
+        public GreateMagic()
+        {
+            
+        }
+
+        public GreateMagic(string name):base(name)
+        {
+            
         }
     }
-}
+}   
+
+        
 
 
 
