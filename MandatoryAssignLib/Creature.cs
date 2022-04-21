@@ -41,6 +41,9 @@ namespace MandatoryAssignLib
 
         }
 
+        /// <summary>
+        /// Dependecy Inversion
+        /// </summary>
 
         private List<DefenceItem> ListOFdefenceItems = new List<DefenceItem>();
         private List<AttackItem> ListOfattackItems = new List<AttackItem>();
@@ -98,6 +101,7 @@ namespace MandatoryAssignLib
         /// <param name="hit"></param>
         public void RecivedFromOtherCreature(int slaps)
         {
+            //   used linq here 
             var defence = ListOFdefenceItems.Sum(defenceItem => defenceItem.Damage);
             HitPoint -= (slaps - defence);
         }

@@ -24,7 +24,7 @@ namespace MandatoryAssignLib
             string fullpath = Path.Combine(path, xmldoc);
 
             XmlDocument configdoc = new XmlDocument();
-            configdoc.Load(fullpath);
+            configdoc.Load(xmldoc);
 
             XmlNode WorldMininumSize = configdoc.DocumentElement.SelectSingleNode("worldsizeminimum");
             if (WorldMininumSize != null)

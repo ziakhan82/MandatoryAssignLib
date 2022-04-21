@@ -2,7 +2,7 @@
 {
     public class GreateMagic : AttackItem
     {
-        public override string Name { get; set; }
+        
 
         public override int HitPoints
         {

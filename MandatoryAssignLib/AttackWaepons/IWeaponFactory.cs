@@ -9,7 +9,7 @@ namespace MandatoryAssignLib.Interfaces
    public interface IWeaponFactory
     {
         /// <summary>
-        /// how we create an attack weapons
+        /// how we create an attack weapons for attack
         /// </summary>
         /// <param name="type">AttackWeapons type that we have in our enum</param>
         /// <returns></returns>

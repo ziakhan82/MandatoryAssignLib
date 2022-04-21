@@ -11,7 +11,7 @@ namespace MandatoryAssignLib.Interfaces
         /// <summary>
         /// how we create the defence  weapons
         /// </summary>
-        /// <param name="type"></param>
+        /// <param name="type">Type of the defence weapons</param>
         /// <returns></returns>
 
         /// n

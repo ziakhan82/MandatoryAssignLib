@@ -13,7 +13,7 @@ namespace MandatoryAssignLib
         /// Properties for the attack item
         /// </summary>
 
-        public abstract string Name  { get; set; }
+        //public abstract string Name  { get; set; }
         public abstract int HitPoints { get; }
         public abstract string description { get; }
         public abstract int Range { get;  }
@@ -22,7 +22,10 @@ namespace MandatoryAssignLib
         {
             
         }
-
+        /// <summary>
+        /// Constructor with one parameter to intialize the name of attackItem
+        /// </summary>
+        /// <param name="name"></param>
         public AttackItem(string name)
         {
             this.Name = name;
@@ -32,7 +35,7 @@ namespace MandatoryAssignLib
 
         public override string ToString()
         {
-            return $"{Name}:{description},dealing{HitPoints} hitPoints,Range{Range}";
+            return $"{Name}:{description},{HitPoints} hitPoints,Range{Range}";
         }
     }
 }

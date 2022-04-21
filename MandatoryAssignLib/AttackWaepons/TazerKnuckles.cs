@@ -2,7 +2,7 @@
 {
     public class TazerKnuckles : AttackItem
     {
-        public override string Name { get; set;}
+        
         
             
 

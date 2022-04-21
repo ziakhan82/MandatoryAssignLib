@@ -23,6 +23,14 @@ namespace _2DGameConsole
          creature.isDead();
          Tracing.log(TraceEventType.Error,"you are dead");
 
+         NewWeaponFactory newWeaponFactory = new NewWeaponFactory();
+        var newWeapon= newWeaponFactory.Create(AttackWeapons.Melee);
+        Console.WriteLine(newWeapon);
+
+        Console.WriteLine();
+        Configuration.ReadConfiguration();
+        Console.WriteLine(Configuration.MaxWorld + " " + Configuration.MinWorld);
+
 
         }
     }

@@ -2,7 +2,7 @@
 {
     public class Dagger : AttackItem
     {
-        public override string Name { get; set; }
+       
         
 
 
